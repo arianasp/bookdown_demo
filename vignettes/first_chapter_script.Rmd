@@ -1,0 +1,30 @@
+---
+output: html_document
+editor_options:
+  chunk_output_type: console
+---
+# First Chapter (Heading - only 1 per Rmd doc)
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      comment = "#>",
+                      collapse = TRUE)
+knitr::opts_knit$set(root.dir = '../')
+```
+
+Here is some text explaining the first chapter
+
+```{r}
+#Here is some visible code and plot
+x <- seq(0,10)
+y <- x^2
+plot(x,y)
+
+```
+
+```{r, include = FALSE}
+#Here is an invisible chunk of code
+x <- seq(0,10)
+y <- sqrt(x)
+plot(x,y)
+
+```
